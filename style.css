@@ -134,3 +134,16 @@ body {
 /* body{
   background-image: linear-gradient(to right, #ec6f66, #f3a183);
 } */
+/*css for image banner*/
+.img-banner{
+  width: 100%;
+  height: auto;
+
+}
+.img-banner::before{
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  height: auto;
+  width: 25%;
+}
