@@ -1,149 +1,132 @@
-
-    
+.pulsate{
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}
+h1{
+    animation: pulsate 2.5s infinite alternate;
+}
 body{
-    margin: 0px;
+  margin: 0;
+  padding: 0;
+  background-color:rgb(51, 46, 46);
+  background-image: url("https://acegif.com/wp-content/gifs/starfall-gif-46.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-a:visited{
-    color: ghostwhite;
+.container{
+  height: 500px;
+  width: 900px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-left: 120px;
 }
-a{
-    text-decoration: none;
-}
-.navbar{
-    background-color:#333333;
-    width: 100vw;
-    padding: 0;
-    margin: 0;
-    height: 15vh;
-    /* border: 0.5vw solid red; */
-    border-radius: 5px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: flex-end;
-
+h3{
+    font-size: xx-large;
+    text-align: center;
+    font-family: sans-serif;
 }
 .item{
-    font:normal small-caps 1.2em Sans-serif;
-    background-color: #04AA63;
-    color:white;
-    /* border: 3px solid fuchsia; */
-    height: auto;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    transition:0.5s;
+  
+  height: 100px;
+  width: 300px;
 }
-
-.item:hover{
-    background-color:rgb(22, 22, 22);
-    
-}
-.logo{
-    position: relative;
-    display: flex;
-    height:20vh;
-    background-attachment: fixed;
-    background-color: #ffffff;
-    margin-left:0px;
-    justify-content: space-between;
-}
-#signup{
-    text-align: center;
-    padding: 0.7em;
-    box-sizing: border-box;
-    width: 10em;
-    margin: auto;
-    margin-right: 20px;
-    height: 3em;
-    font-size: 1.5em;
-    font-family: sans-serif;
-    background-color: #01B2D2FF;
-    border-radius: 10px;
-    transition: 0.5s;
-
+.tools{
+ 
+  font-family: sans-serif;
+  font-weight: bolder;
+  border: 10px solid rgb(196, 10, 165);
+  width: 800px;
+  grid-column: 1 / span 2; 
+  color: aliceblue;
+  font-size: x-large;
+  text-align: center;
+  padding-bottom: 20px;
+  
 
 }
-#signup:hover{
-    background-color:rgb(22, 22, 22) ;
+.btn1{
+  grid-column: 1 / span 2;
 }
-
-/* css for sidebar */
-body {
-    font-family: "Lato", sans-serif;
-  }
-  
-  .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidebar a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-  }
-  
-  .openbtn:hover {
-    background-color: #444;
-  }
-  
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
-/* css for sidebar */
-/* body{
-  background-image: linear-gradient(to right, #ec6f66, #f3a183);
-} */
-/*css for image banner*/
-.img-banner{
-  width: 100%;
-  height: auto;
-
+.btn3{
+  grid-column: 1 / span 2;
 }
-.img-banner::before{
+.btn4{
+  grid-column: 1 / span 2;
+}
+.btn{
+  height: 100px;
+  width: 200px;
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-family: "montserrat";
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid #ff7675;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.btn::before{
+  background: #ff7675;
   content: "";
-  background-color: #000000;
   position: absolute;
-  height: auto;
-  width: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.2s ease;
+}
+
+.btn1::before{
+  background-color: #ff7675;
+  width: 0%;
+  height: 100%;
+}
+
+.btn1:hover::before{
+  width: 100%;
+}
+
+
+/* .btn2::before{
+  width: 0%;
+  height: 100%;
+}
+.btn2:hover::before{
+  width: 100%;
+} */
+
+.btn3::before{
+  width: 0%;
+  height: 100%;
+  
+}
+.btn3:hover::before{
+  width: 100%;
+}
+
+.btn4::before{
+  background-color: #ff7675;
+  width: 0%;
+  height: 100%;
+  
+}
+.btn4:hover::before{
+    width: 100%;
 }
